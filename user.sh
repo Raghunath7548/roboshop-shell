@@ -42,16 +42,16 @@ useradd roboshop &>>$LOGFILE
 mkdir /app &>>$LOGFILE
 
 # give full path of user.service becuase we are inside /app
-curl -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>>$LOGFILE
+curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>>$LOGFILE
 VALIDATE $? "downloading user artifact"
 
-cd /app &>>$LOGFILE
+cd /app  &>>$LOGFILE
 VALIDATE $? "Moving into app directory"
 
 unzip /tmp/user.zip &>>$LOGFILE
 VALIDATE $? "unzipping user"
 
-npm install  &>>$LOGFILE
+npm install   &>>$LOGFILE
 
 VALIDATE $? "Installing dependencies"
 
