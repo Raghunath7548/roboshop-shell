@@ -56,7 +56,7 @@ npm install  &>>$LOGFILE
 VALIDATE $? "Installing dependencies"
 
 # give full path of user.service becuse we are inside /app
-cp /root/roboshop-shell/user.service /etc/systemd/system/user.service &>>$LOGFILE
+cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service &>>$LOGFILE
 
 VALIDATE $? "copying user.service"
 
@@ -74,7 +74,7 @@ systemctl start user &>>$LOGFILE
 
 VALIDATE $? "Starting user"
 
-cp /root/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
+cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
 
 VALIDATE $? "Copying Mongo Repo"
 
