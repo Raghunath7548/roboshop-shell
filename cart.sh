@@ -55,6 +55,8 @@ npm install
 
 VALIDATE $? "Installing dependencies"
 
+cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service
+
 systemctl daemon-reload &>>$LOGFILE
 
 VALIDATE $? "daemon-reload"
