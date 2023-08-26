@@ -36,8 +36,6 @@ useradd roboshop &>> $LOGFILE
 
 mkdir /app &>> $LOGFILE
 
-VALIDATE $? "Create app folder"
-
 
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip &>> $LOGFILE
 
