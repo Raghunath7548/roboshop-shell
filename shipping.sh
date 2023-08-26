@@ -80,7 +80,7 @@ yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "Install mysql"
 
-mysql -h mysql.devopsjoin.online -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> $LOGFILE
+mysql -h mssql.devopsjoin.online -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> $LOGFILE
 
 VALIDATE $? "Load the schema"
 
