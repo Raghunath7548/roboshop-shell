@@ -28,11 +28,11 @@ VALIDATE(){
 
 yum module disable mysql -y &>> $LOGFILE
 
-VALIDATION $? "Disabling Default mysql Version"
+VALIDATE $? "Disabling Default mysql Version"
 
 cp /home/centos/roboshop-shell/mysql.repo /etc/yum.repos.d/mysql.repo &>> $LOGFILE
 
-VALIDATION $? "Copying mysql repo"
+VALIDATE $? "Copying mysql repo"
 
 yum install mysql-community-server -y &>> $LOGFILE
 
@@ -40,11 +40,11 @@ VALIDATE $? "Installing mysql server"
 
 systemctl enable mysqld &>> $LOGFILE
 
-VALIDATION $? "Enabling mysql"
+VALIDATE $? "Enabling mysql"
 
 systemctl start mysqld &>> $LOGFILE
 
-VALIDATION $? "Starting mysql"
+VALIDATE $? "Starting mysql"
 
 mysql_secure_installation --set-root-pass RoboShop@1 &>> $LOGFILE
 
