@@ -33,8 +33,6 @@ VALIDATE $? "Maven Installation"
 
 useradd roboshop &>> $LOGFILE
 
-VALIDATE $? "Roboshop Use adding"
-
 
 mkdir /app &>> $LOGFILE
 
